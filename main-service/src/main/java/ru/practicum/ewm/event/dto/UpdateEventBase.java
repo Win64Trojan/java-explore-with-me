@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.validator.constraints.Length;
-import ru.practicum.ewm.event.constants.DateFormatConstants;
+import ru.practicum.ewm.constants.DateFormatConstants;
 import ru.practicum.ewm.location.Location;
 
 import java.time.LocalDateTime;

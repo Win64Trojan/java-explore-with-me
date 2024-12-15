@@ -5,6 +5,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
+import ru.practicum.ewm.constants.DateFormatConstants;
 import ru.practicum.ewm.request.RequestStatus;
 
 import java.time.LocalDateTime;
@@ -21,6 +22,6 @@ public class ParticipationRequestDto {
 
     RequestStatus status;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = DateFormatConstants.DATE_TIME_PATTERN)
     LocalDateTime created;
 }
