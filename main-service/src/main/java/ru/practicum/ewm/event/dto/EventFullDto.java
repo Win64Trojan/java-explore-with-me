@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import ru.practicum.ewm.category.dto.CategoryOutDto;
+import ru.practicum.ewm.event.constants.DateFormatConstants;
 import ru.practicum.ewm.event.model.EventStatus;
 import ru.practicum.ewm.location.Location;
 import ru.practicum.ewm.user.dto.UserShortDto;
@@ -25,12 +26,12 @@ public class EventFullDto {
 
     Integer confirmedRequests;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DateFormatConstants.DATE_TIME_PATTERN)
     LocalDateTime createdOn;
 
     String description;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DateFormatConstants.DATE_TIME_PATTERN)
     LocalDateTime eventDate;
 
     UserShortDto initiator;
@@ -41,7 +42,7 @@ public class EventFullDto {
 
     Integer participantLimit;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DateFormatConstants.DATE_TIME_PATTERN)
     LocalDateTime publishedOn;
 
     Boolean requestModeration;

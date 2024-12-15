@@ -9,6 +9,7 @@ import jakarta.validation.constraints.PositiveOrZero;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.validator.constraints.Length;
+import ru.practicum.ewm.event.constants.DateFormatConstants;
 import ru.practicum.ewm.location.Location;
 
 import java.time.LocalDateTime;
@@ -32,7 +33,7 @@ public class NewEventDto {
     @Length(max = 7000, min = 20)
     String description;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DateFormatConstants.DATE_TIME_PATTERN)
     LocalDateTime eventDate;
 
     @NotNull
