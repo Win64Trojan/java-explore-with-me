@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 public class CompilationMapper {
     public static CompilationDto toDto(Compilation compilation) {
         return CompilationDto.builder()
+                .id(compilation.getId())
                 .events(compilation.getEvents().stream()
                         .map(EventMapper::toEventShortDto)
                         .collect(Collectors.toSet()))
