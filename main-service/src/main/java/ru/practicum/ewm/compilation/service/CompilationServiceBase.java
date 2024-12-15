@@ -92,7 +92,9 @@ public class CompilationServiceBase  implements CompilationService {
     }
 
     private Compilation checkCompilation(Long compId) {
-        return compilationRepository.findById(compId).orElseThrow(
-                () -> new NotFoundException("Compilation с id = " + compId + " не найден"));
+        if (!compilationRepository.existsById(compId)) {
+            throw new NotFoundException("Compilation с id = " + compId + " не найден");
+        }
+        return compilationRepository.findById(compId).orElse(null);
     }
 }
