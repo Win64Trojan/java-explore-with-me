@@ -1,5 +1,7 @@
 package ru.practicum.ewm.event.mapper;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import ru.practicum.ewm.category.CategoryMapper;
 import ru.practicum.ewm.event.dto.EventFullDto;
 import ru.practicum.ewm.event.dto.EventShortDto;
@@ -12,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class EventMapper {
     public static EventShortDto toEventShortDto(Event event) {
         return EventShortDto.builder()

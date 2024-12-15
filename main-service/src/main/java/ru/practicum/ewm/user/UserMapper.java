@@ -1,9 +1,12 @@
 package ru.practicum.ewm.user;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import ru.practicum.ewm.user.dto.UserInDto;
 import ru.practicum.ewm.user.dto.UserOutDto;
 import ru.practicum.ewm.user.dto.UserShortDto;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserMapper {
     public static UserOutDto toUserOutDto(User user) {
         return UserOutDto.builder()

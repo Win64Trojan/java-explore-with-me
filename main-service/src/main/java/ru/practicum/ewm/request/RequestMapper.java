@@ -1,7 +1,10 @@
 package ru.practicum.ewm.request;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import ru.practicum.ewm.request.service.ParticipationRequestDto;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class RequestMapper {
     public static ParticipationRequestDto toParticipationRequestDto(Request request) {
         return ParticipationRequestDto.builder()
