@@ -41,6 +41,7 @@ public class CommentPrivateController {
         log.info("==> Получение коментариев пользователя с userId = {} ", userId);
         return commentService.getByUser(userId);
     }
+
     @DeleteMapping(ENDPOINT_PATH)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Long userId, @PathVariable Long commentId) {
